@@ -1,32 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap-grid.min.css"
-  integrity="sha512-pkOzvsY+X67Lfs6Yr/dbx+utt/C90MITnkwx8X5fyKkBorWHJLlR3TmgNJs83URAR0GdejZZnjZdgYjzL/mtcQ=="
-  crossorigin="anonymous"/>
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap-grid.min.css"
+    integrity="sha512-pkOzvsY+X67Lfs6Yr/dbx+utt/C90MITnkwx8X5fyKkBorWHJLlR3TmgNJs83URAR0GdejZZnjZdgYjzL/mtcQ=="
+    crossorigin="anonymous" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.min.css"
     integrity="sha512-MoRNloxbStBcD8z3M/2BmnT+rg4IsMxPkXaGh2zD6LGNNFE80W3onsAhRcMAMrSoyWL9xD7Ert0men7vR8LUZg=="
     crossorigin="anonymous" />
-  <link rel ="stylesheet" href="style.css"/>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
   <title>Student Grade Table</title>
 </head>
+
 <body>
-  <header class ="m-auto pl-0 col-9 d-flex">
-    <h3>Student Grade Table</h3>
-    <h4 class="col-8 d-flex justify-content-end">Average Grade<span class="ml-2 badge badge-danger" id="average-grade"></span></h4>
+  <header class="m-auto pl-0 col-11 d-flex">
+    <h3 clas="col-8">Student Grade Table</h3>
+    <h4 class="col-9 d-flex justify-content-end">Average Grade<span class="ml-2 badge badge-danger"
+        id="average-grade"></span></h4>
   </header>
-<table class="m-auto col-9 table table-striped table-bordered">
-  <thead class="thead-dark">
-    <tr>
-      <th scope="col">Student Name</th>
-      <th scope="col">Course</th>
-      <th scope="col">Grade</th>
-    </tr>
-  </thead>
-  <tbody>
-    <!-- <tr>
+  <div class="container">
+    <div class="row">
+      <table class="col-8 table table-striped table-bordered">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">Student Name</th>
+            <th scope="col">Course</th>
+            <th scope="col">Grade</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- <tr>
       <td>Tim Berners-Lee</td>
       <td>Web Development</td>
       <td>100</td>
@@ -41,12 +48,40 @@
       <td>Web Development</td>
       <td>50</td>
     </tr> -->
-  </tbody>
-  </table>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js"></script>
-  <script src="components/app.js"></script>
-  <script src="components/grade-table.js"></script>
-  <script src="components/page-header.js"></script>
-  <script src="main.js"></script>
+        </tbody>
+      </table>
+      <form class="col-4">
+        <div class="input-group mb-2">
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="addon-wrapping"><i class="fas fa-user-astronaut"></i></span>
+          </div>
+          <input type="text" class="form-control" placeholder="student name" id="studentName" name="name">
+        </div>
+        <div class="input-group mb-2">
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="addon-wrapping"><i class="fas fa-calculator"></i></span>
+          </div>
+          <input type="text" class="form-control" placeholder="course" id="studentCourse" name="course">
+        </div>
+        <div class="input-group mb-2">
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="addon-wrapping"><i class="fas fa-chess"></i></span>
+          </div>
+          <input type="text" class="form-control" placeholder="grade" id="studentGrade" name="grade">
+        </div>
+        <div class="row justify-content-end mr-1">
+          <button class="btn btn-primary mx-1" type="submit">Add</button>
+          <button class="btn btn-primary" type="reset">Cancel</button>
+        </div>
+      </form>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js"></script>
+    <script src="components/app.js"></script>
+    <script src="components/grade-table.js"></script>
+    <script src="components/page-header.js"></script>
+    <script src="components/grade-form.js"></script>
+    <script src="main.js"></script>
 </body>
+
 </html>
