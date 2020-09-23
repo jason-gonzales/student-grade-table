@@ -11,7 +11,6 @@ class GradeForm {
 
   handleSubmit(event) {
     event.preventDefault();
-    console.log("handleSubmit called");
 
     var formData = new FormData(event.target);
     var formName = formData.get("name");

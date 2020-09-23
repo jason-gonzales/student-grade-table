@@ -1,6 +1,8 @@
+// var none = document.querySelector("#noGrades");
 var form = document.querySelector("form");
 var header = document.querySelector("header");
-var table = document.querySelector("table");
+var table = document.querySelector("tbody");
+
 var gradeForm = new GradeForm(form);
 var pageHeader = new PageHeader(header);
 var gradeTable = new GradeTable(table);
